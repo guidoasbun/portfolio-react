@@ -1,10 +1,11 @@
 import React from 'react';
-import Main from './components/layout/Main';
+import { Route, Switch } from 'react-router-dom'
+import Menu from './components/layout/Menu';
 
 function App() {
   return (
     <div>
-      <Main />
+      <Menu />
     </div>
   );
 }

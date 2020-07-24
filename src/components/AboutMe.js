@@ -9,6 +9,7 @@ import Divider from "@material-ui/core/Divider";
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
+        marginBottom: '20px'
     },
     title: {
         fontSize: 30,

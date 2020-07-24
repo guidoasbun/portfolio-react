@@ -101,14 +101,24 @@ function Menu(props) {
     {
       text: "Github",
       icon: <GitHubIcon />,
+      onClick: () => {
+        window.location.href = 'https://github.com/guidoasbun';
+      }
+
     },
     {
       text: "LinkedIn",
       icon: <LinkedInIcon />,
+      onClick: () => {
+        console.log('Click')
+      }
     },
     {
       text: "Resume",
       icon: <DescriptionIcon />,
+      onClick: () => {
+        console.log('Click')
+      }
     },
   ];
 
@@ -128,7 +138,7 @@ function Menu(props) {
       <List>
         {menuItemBottom.map((item, index) => (
           <ListItem button key={item.text}>
-            <ListItemText primary={item.text} />
+            <ListItemText primary={item.text} onClick={item.onClick}/>
             <ListItemIcon>{item.icon}</ListItemIcon>
           </ListItem>
         ))}

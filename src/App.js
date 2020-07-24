@@ -1,11 +1,16 @@
-import React from 'react';
-import Menu from './components/layout/Menu';
+import React from "react";
+import Menu from "./components/layout/Menu";
+
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "./components/theme/theme";
 
 function App() {
   return (
-    <div>
-      <Menu />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Menu />
+      </div>
+    </ThemeProvider>
   );
 }
 

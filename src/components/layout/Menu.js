@@ -6,7 +6,7 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import DescriptionIcon from '@material-ui/icons/Description';
+import DescriptionIcon from "@material-ui/icons/Description";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -15,7 +15,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonIcon from "@material-ui/icons/Person";
 import ComputerIcon from "@material-ui/icons/Computer";
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -24,7 +24,8 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 import AboutMe from "../AboutMe";
 import Skills from "../Skills";
-
+import Projects from "../Projects";
+import Contact from "../Contact";
 
 import ProfileImage from "../ProfileImage";
 
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
-      height: '50px',
+      height: "50px",
       marginLeft: drawerWidth,
     },
   },
@@ -63,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   card: {
-    marginBottom: '20px'
-  }
+    marginBottom: "20px",
+  },
 }));
 
 function Menu(props) {
@@ -103,17 +104,17 @@ function Menu(props) {
     },
     {
       text: "LinkedIn",
-      icon: <LinkedInIcon/>
+      icon: <LinkedInIcon />,
     },
     {
       text: "Resume",
-      icon: <DescriptionIcon/>
+      icon: <DescriptionIcon />,
     },
   ];
 
   const drawer = (
     <div>
-      <ProfileImage/>
+      <ProfileImage />
       <Divider />
       <List>
         {menuItemTop.map((item, index) => (
@@ -128,12 +129,11 @@ function Menu(props) {
         {menuItemBottom.map((item, index) => (
           <ListItem button key={item.text}>
             <ListItemText primary={item.text} />
-            <ListItemIcon>
-              {item.icon}
-            </ListItemIcon>
+            <ListItemIcon>{item.icon}</ListItemIcon>
           </ListItem>
         ))}
       </List>
+      <Divider />
     </div>
   );
 
@@ -154,7 +154,6 @@ function Menu(props) {
           >
             <MenuIcon />
           </IconButton>
-
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -190,9 +189,14 @@ function Menu(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography variant="h2" noWrap align='center' gutterBottom> Guido Asbun </Typography>
-        <AboutMe/>
-        <Skills/>
+        <Typography variant="h2" noWrap align="center" gutterBottom>
+          {" "}
+          Guido Asbun{" "}
+        </Typography>
+        <AboutMe />
+        <Skills />
+        <Projects/>
+        <Contact/>
       </main>
     </div>
   );

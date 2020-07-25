@@ -102,7 +102,6 @@ function Menu(props) {
       text: "Github",
       icon: <GitHubIcon />,
       onClick: () => {
-        window.location.href = 'https://github.com/guidoasbun';
       }
 
     },

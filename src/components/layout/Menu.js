@@ -21,6 +21,7 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
 
 import AboutMe from "../AboutMe";
 import Skills from "../Skills";
@@ -82,18 +83,28 @@ function Menu(props) {
     {
       text: "About Me",
       icon: <PersonIcon />,
+      link: "#skills",
     },
     {
       text: "Skills",
       icon: <ComputerIcon />,
+      onClick: () => {
+        console.log("Click");
+      },
     },
     {
       text: "Projects",
       icon: <AccountTreeIcon />,
+      onClick: () => {
+        console.log("Click");
+      },
     },
     {
       text: "Contact Me",
       icon: <MailIcon />,
+      onClick: () => {
+        console.log("Click");
+      },
     },
   ];
 
@@ -101,23 +112,17 @@ function Menu(props) {
     {
       text: "Github",
       icon: <GitHubIcon />,
-      onClick: () => {
-      }
-
+      link: "https://github.com/guidoasbun",
     },
     {
       text: "LinkedIn",
       icon: <LinkedInIcon />,
-      onClick: () => {
-        console.log('Click')
-      }
+      link: "https://www.linkedin.com/in/guidoasbun/",
     },
     {
       text: "Resume",
       icon: <DescriptionIcon />,
-      onClick: () => {
-        console.log('Click')
-      }
+      link: "https://guido-asbun.s3.amazonaws.com/Guido+Asbun+Resume.pdf",
     },
   ];
 
@@ -127,19 +132,23 @@ function Menu(props) {
       <Divider />
       <List>
         {menuItemTop.map((item, index) => (
-          <ListItem button key={item.text}>
-            <ListItemText primary={item.text} />
-            <ListItemIcon>{item.icon}</ListItemIcon>
-          </ListItem>
+          <a href={item.link}>
+            <ListItem button key={item.text}>
+              <ListItemText primary={item.text} onClick={item.onClick} />
+              <ListItemIcon>{item.icon}</ListItemIcon>
+            </ListItem>
+          </a>
         ))}
       </List>
       <Divider />
       <List>
         {menuItemBottom.map((item, index) => (
-          <ListItem button key={item.text}>
-            <ListItemText primary={item.text} onClick={item.onClick}/>
-            <ListItemIcon>{item.icon}</ListItemIcon>
-          </ListItem>
+          <a target="_blank" href={item.link}>
+            <ListItem button key={item.text}>
+              <ListItemText primary={item.text} />
+              <ListItemIcon>{item.icon}</ListItemIcon>
+            </ListItem>
+          </a>
         ))}
       </List>
       <Divider />
@@ -203,9 +212,9 @@ function Menu(props) {
           Guido Asbun{" "}
         </Typography>
         <AboutMe />
-        <Skills />
-        <Projects/>
-        <Contact/>
+        <Skills id="skills" />
+        <Projects />
+        <Contact />
       </main>
     </div>
   );

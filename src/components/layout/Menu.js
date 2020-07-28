@@ -23,12 +23,11 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
 import Skills from "./Skills";
 import Projects from "./projects/Projects";
-
 import ProfileImage from "../ProfileImage";
 
+const { uuid } = require('uuidv4');
 const drawerWidth = 210;
 
 const useStyles = makeStyles((theme) => ({
@@ -66,10 +65,14 @@ const useStyles = makeStyles((theme) => ({
   card: {
     marginBottom: "20px",
   },
+  a: {
+    color: "inherit",
+    textDecoration: "none"
+  }
 }));
 
 function Menu(props) {
-  const { window, history } = props;
+  const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -82,27 +85,27 @@ function Menu(props) {
     {
       text: "Home",
       icon: <HomeIcon />,
-      link: '/'
+      link: "/",
     },
     {
       text: "About Me",
       icon: <PersonIcon />,
-      link: '/about'
+      link: "/about",
     },
     {
       text: "Skills",
       icon: <ComputerIcon />,
-      link: '/skills'
+      link: "/skills",
     },
     {
       text: "Projects",
       icon: <AccountTreeIcon />,
-      link: 'projects'
+      link: "projects",
     },
     {
       text: "Contact Me",
       icon: <MailIcon />,
-      link: '/contact'
+      link: "/contact",
     },
   ];
 
@@ -130,19 +133,19 @@ function Menu(props) {
       <Divider />
       <List>
         {menuItemTop.map((item, index) => (
-            <Link to={item.link}>
-          <ListItem button key={item.text}>
-            <ListItemText primary={item.text} />
-            <ListItemIcon>{item.icon}</ListItemIcon>
-          </ListItem>
+          <Link className={classes.a} to={item.link} key={uuid()}>
+            <ListItem button >
+              <ListItemText primary={item.text} />
+              <ListItemIcon>{item.icon}</ListItemIcon>
+            </ListItem>
           </Link>
         ))}
       </List>
       <Divider />
       <List>
         {menuItemBottom.map((item, index) => (
-          <a target="_blank" href={item.link}>
-            <ListItem button key={item.text}>
+          <a target="_blank" href={item.link} className={classes.a} key={uuid()}>
+            <ListItem button >
               <ListItemText primary={item.text} />
               <ListItemIcon>{item.icon}</ListItemIcon>
             </ListItem>
@@ -223,3 +226,11 @@ Menu.propTypes = {
 };
 
 export default Menu;
+
+
+// <a target="_blank" href={item.link}  key={uuid()}>
+//   <ListItem button >
+//     <ListItemText primary={item.text} />
+//     <ListItemIcon>{item.icon}</ListItemIcon>
+//   </ListItem>
+// </a>

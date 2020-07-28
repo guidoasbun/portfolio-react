@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     marginLeft: 12,
     [theme.breakpoints.up("sm")]: {
-      marginLeft: 12,
+      marginLeft: 1,
       marginRight: 12,
     },
   },

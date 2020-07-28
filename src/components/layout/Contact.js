@@ -4,7 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import { Grid } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,6 +30,14 @@ const useStyles = makeStyles((theme) => ({
     component: {
         marginLeft: '5px'
     },
+    a: {
+        color: "inherit",
+        textDecoration: "none"
+    },
+    button: {
+        marginTop: 10,
+        marginBottom: 10
+    }
 }));
 
 const Contact = () => {
@@ -37,13 +45,13 @@ const Contact = () => {
     return (
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title}>Contact</Typography>
+                <Typography className={classes.title}>Contact Me</Typography>
                 <Divider className={classes.divider}/>
+                <Typography variant='subtitle1'>Call Me</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">(949)239-4144</Typography>
+                <Button className={classes.button} variant='outlined'><a className={classes.a} href="mailto:someone@yoursite.com">Email Me</a></Button>
+                <Typography variant="body2" color="textSecondary" component="p">guido.asbun@gmail.com</Typography>
 
-                <Grid container>
-
-
-                </Grid>
             </CardContent>
         </Card>
     );

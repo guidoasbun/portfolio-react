@@ -9,6 +9,7 @@ import AboutMe from "./components/layout/AboutMe";
 import Skills from "./components/layout/Skills";
 import Projects from "./components/layout/projects/Projects";
 import Contact from "./components/layout/Contact";
+import NotFound from "./components/layout/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/skills" component={Skills}/>
               <Route path="/projects" component={Projects}/>
               <Route path="/contact" component={Contact}/>
+              <Route path="/*" component={NotFound}/>
           </Switch>
         </div>
       </Router>

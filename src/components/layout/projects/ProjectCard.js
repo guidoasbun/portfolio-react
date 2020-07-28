@@ -28,6 +28,10 @@ const useStyles = makeStyles({
     icon: {
       color: 'black',
         marginLeft: 5
+    },
+    a: {
+        color: "inherit",
+        textDecoration: "none"
     }
 });
 
@@ -49,23 +53,23 @@ const ProjectCard = (props) => {
       />
       <Divider className={classes.divider} />
       <CardActions>
-        <a target="_blank" href={githubLink}>
+        <a className={classes.a} target="_blank" href={githubLink}>
           <Button size="small" color="secondary">
             Github <GitHubIcon className={classes.icon}/>
           </Button>
         </a>
-        <a target="_blank" href={deployLink}>
+        <a className={classes.a} target="_blank" href={deployLink}>
           <Button size="small" color="secondary">
             Link <WebIcon className={classes.icon}/>
           </Button>
         </a>
       </CardActions>
       <CardContent>
-        <Typography variant='h6'>Description</Typography>
+        <Typography variant='subtitle1'><u>Description</u> </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {summary}
         </Typography>
-        <Typography variant='h6'>Technology Used</Typography>
+          <Typography variant='subtitle1'><u>Technology Used</u></Typography>
         <Typography variant="body2" color="textSecondary" component="p">
           {techUsed}
         </Typography>

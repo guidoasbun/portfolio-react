@@ -9,6 +9,8 @@ import { Grid } from "@material-ui/core";
 import ProjectCard from "./ProjectCard";
 import projectList from '../../../data/projectsData'
 
+const { uuid } = require('uuidv4');
+
 const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
@@ -39,7 +41,7 @@ const Projects = () => {
     const classes = useStyles();
     const getProjectCard = projectObj => {
         return (
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={1}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={1} key={uuid()}>
                 <ProjectCard {...projectObj}/>
             </Grid>
         )

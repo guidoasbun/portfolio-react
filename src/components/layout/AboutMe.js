@@ -5,11 +5,16 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Divider from "@material-ui/core/Divider";
 
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
-        marginBottom: '20px'
+        marginBottom: '20px',
+        display: "flex",
+        marginLeft: 12,
+        [theme.breakpoints.up("sm")]: {
+            marginLeft: 220,
+            marginRight: 12,
+        },
     },
     title: {
         fontSize: 30,
@@ -18,7 +23,7 @@ const useStyles = makeStyles({
     pos: {
         marginTop: 12,
     },
-});
+}));
 
  const AboutMe = () => {
     const classes = useStyles();

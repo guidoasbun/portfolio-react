@@ -17,16 +17,15 @@ import PersonIcon from "@material-ui/icons/Person";
 import ComputerIcon from "@material-ui/icons/Computer";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import HomeIcon from "@material-ui/icons/Home";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
 
-import AboutMe from "../AboutMe";
-import Skills from "../Skills";
-import Projects from "../Projects";
-import Contact from "../Contact";
+import Skills from "./Skills";
+import Projects from "./projects/Projects";
 
 import ProfileImage from "../ProfileImage";
 
@@ -70,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Menu(props) {
-  const { window } = props;
+  const { window, history } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -81,30 +80,29 @@ function Menu(props) {
 
   const menuItemTop = [
     {
+      text: "Home",
+      icon: <HomeIcon />,
+      link: '/'
+    },
+    {
       text: "About Me",
       icon: <PersonIcon />,
-      link: "#skills",
+      link: '/about'
     },
     {
       text: "Skills",
       icon: <ComputerIcon />,
-      onClick: () => {
-        console.log("Click");
-      },
+      link: '/skills'
     },
     {
       text: "Projects",
       icon: <AccountTreeIcon />,
-      onClick: () => {
-        console.log("Click");
-      },
+      link: 'projects'
     },
     {
       text: "Contact Me",
       icon: <MailIcon />,
-      onClick: () => {
-        console.log("Click");
-      },
+      link: '/contact'
     },
   ];
 
@@ -132,12 +130,12 @@ function Menu(props) {
       <Divider />
       <List>
         {menuItemTop.map((item, index) => (
-          <a href={item.link}>
-            <ListItem button key={item.text}>
-              <ListItemText primary={item.text} onClick={item.onClick} />
-              <ListItemIcon>{item.icon}</ListItemIcon>
-            </ListItem>
-          </a>
+            <Link to={item.link}>
+          <ListItem button key={item.text}>
+            <ListItemText primary={item.text} />
+            <ListItemIcon>{item.icon}</ListItemIcon>
+          </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
@@ -211,10 +209,6 @@ function Menu(props) {
           {" "}
           Guido Asbun{" "}
         </Typography>
-        <AboutMe />
-        <Skills id="skills" />
-        <Projects />
-        <Contact />
       </main>
     </div>
   );

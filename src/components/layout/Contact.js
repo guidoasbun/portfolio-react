@@ -6,13 +6,16 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import { Grid } from "@material-ui/core";
 
-import ProjectCard from "./ProjectCard";
-import projectList from '../data/projectsData'
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
         marginBottom: "20px",
+        display: "flex",
+        marginLeft: 12,
+        [theme.breakpoints.up("sm")]: {
+            marginLeft: 220,
+            marginRight: 12,
+        },
     },
     title: {
         fontSize: 30,
@@ -27,32 +30,23 @@ const useStyles = makeStyles({
     component: {
         marginLeft: '5px'
     },
-});
+}));
 
-const Projects = () => {
+const Contact = () => {
     const classes = useStyles();
-    const getProjectCard = projectObj => {
-        return (
-            <Grid item xs={12} sm={6} md={4} lg={2} xl={1}>
-                <ProjectCard {...projectObj}/>
-            </Grid>
-        )
-    }
-
-
     return (
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title}>Projects</Typography>
+                <Typography className={classes.title}>Contact</Typography>
                 <Divider className={classes.divider}/>
 
-                <Grid container spacing={2}>
-                    {projectList.map(projectObj => getProjectCard(projectObj))}
-                </Grid>
+                <Grid container>
 
+
+                </Grid>
             </CardContent>
         </Card>
     );
 };
 
-export default Projects;
+export default Contact;

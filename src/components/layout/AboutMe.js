@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '20px',
         display: "flex",
         marginLeft: 12,
+        marginRight: 12,
         [theme.breakpoints.up("sm")]: {
             marginLeft: 220,
             marginRight: 12,

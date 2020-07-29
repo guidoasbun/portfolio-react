@@ -15,7 +15,7 @@ import WebIcon from '@material-ui/icons/Web';
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
-    minHeight: 500,
+    minHeight: 510,
     alignContent: "center",
   },
   image: {

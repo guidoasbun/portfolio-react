@@ -47,5 +47,9 @@ export default [
         title: " AWS ",
         icon: "fab fa-aws"
     },
+    {
+        title: "iOS / SWIFT",
+        icon: "fab fa-swift"
+    }
 
 ]

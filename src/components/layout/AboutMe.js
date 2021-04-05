@@ -36,7 +36,12 @@ const useStyles = makeStyles((theme) => ({
                 </Typography>
                 <Divider/>
                 <Typography variant="body2" gutterBottom className={classes.pos}>
-                    Full Stack Developer with a background in management. As a manager, demonstrate problem solving, and organization skills by analyzing real time data, and making decisions that positively affect operations on a daily basis. Recently graduated from the University Of California Irvine full stack development program developing skills in MongoDB, Express, React JS, Node JS and many other technologies. Worked on various group projects, some as group lead, to create applications.
+                    Full Stack Developer with a background in management. As a manager,
+                    demonstrate problem solving, and organization skills by analyzing real time data,
+                    and making decisions that positively affect operations on a daily basis.
+                    Recently graduated from the University Of California Irvine full stack development
+                    program developing skills in MongoDB, Express, React JS, Node JS and many other technologies.
+                    Worked on various group projects, some as group lead, to create applications.
                 </Typography>
             </CardContent>
 

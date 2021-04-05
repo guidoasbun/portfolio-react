@@ -4,6 +4,14 @@ export default [
         icon: "fab fa-js"
     },
     {
+        title: "Java",
+        icon: "fab fa-java"
+    },
+    {
+        title: " C++",
+        icon: "fas fa-laptop-code"
+    },
+    {
         title: " Node JS ",
         icon: "fab fa-node-js"
     },

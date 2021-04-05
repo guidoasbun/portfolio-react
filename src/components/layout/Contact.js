@@ -52,7 +52,7 @@ const Contact = () => {
                 <Typography variant='subtitle1'>Call Me</Typography>
                 <Typography variant="body2" color="textSecondary" component="p">(949)239-4144</Typography>
                 <Button className={classes.button} variant='outlined'><a className={classes.a} href="mailto:someone@yoursite.com">Email Me</a></Button>
-                <Typography variant="body2" color="textSecondary" component="p">guido.asbun@gmail.com</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">guido@asbun.io</Typography>
                 <Button className={classes.button} variant='outlined'><a className={classes.a} target="_blank" href="https://www.linkedin.com/in/guidoasbun">Linked In</a></Button>
                 <Typography variant="body2" color="textSecondary" component="p">linkedin.com/in/guidoasbun</Typography>
                 <Button className={classes.button} variant='outlined'><a className={classes.a} target="_blank" href="https://calendly.com/guidoasbun">Calendly</a></Button>

@@ -36,7 +36,7 @@ export default [
     techUsed: "JavaScript, HTML, CSS, openweathermap.org api",
   },
   {
-    title: "Weather Dashboard",
+    title: "Wild Fire Tracker",
     image: "https://guido-asbun.s3.amazonaws.com/WildFire+Tracker.png",
     githubLink: "https://github.com/guidoasbun/wildfire-tracker-react",
     deployLink: "https://master.d1xmvgmnxpwo2a.amplifyapp.com/",

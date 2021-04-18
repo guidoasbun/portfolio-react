@@ -1,13 +1,13 @@
 export default [
   {
     title: "Portfolio",
-    image: "https://guido-asbun.s3.amazonaws.com/Portfolio.gif",
-    githubLink: "https://github.com/guidoasbun/portfolio",
-    deployLink: "https://www.guido-asbun.com",
+    image: "https://guido-asbun.s3.amazonaws.com/Portfolio2.png",
+    githubLink: "https://github.com/guidoasbun/snap-portfolio",
+    deployLink: "https://safety.d20qispccpdccf.amplifyapp.com/",
     summary:
-      "A full stack web application to showcase my information and projects",
+        "Portfolio page to showcase my applications",
     techUsed:
-      "React JS, HTTP/CSS, AWS (Elastic Beanstalk, CodeBuild, EC2, Load Balancer, Route 53, S3 Bucket)",
+        "React JS, HTTP/CSS, AWS, Material UI",
   },
   {
     title: "CrypIt",
@@ -42,5 +42,25 @@ export default [
     deployLink: "https://master.d1xmvgmnxpwo2a.amplifyapp.com/",
     summary: "A web application that displays current wildfire data laid out on google maps.",
     techUsed: "React JS, HTML, CSS, Google maps, NASA api",
-  }
+  },
+  {
+    title: "Simple Calculator",
+    image: "https://guido-asbun.s3.amazonaws.com/Calculator.png",
+    githubLink: "https://github.com/guidoasbun/calculator-vanillaJS",
+    deployLink: "https://guidoasbun.github.io/calculator-vanillaJS/",
+    summary:
+        "A simple calculator that calculates basic arithmetic. Multiplication, Division, Addition, Subtraction",
+    techUsed:
+        "Vanilla JavaScript, CSS, HTML, Flex Box, Bootstrap 5, Github Pages",
+  },
+  {
+    title: "Snake",
+    image: "https://guido-asbun.s3.amazonaws.com/snake.png",
+    githubLink: "https://github.com/guidoasbun/snake-javascript",
+    deployLink: "https://guidoasbun.github.io/snake-javascript/",
+    summary:
+        "The snake game. Move the snake using the direction keys, eat all the food.",
+    techUsed:
+        "Vanilla JavaScript, CSS, HTML, Flex Box, Bootstrap 5, Github Pages",
+  },
 ];

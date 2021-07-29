@@ -123,7 +123,7 @@ function Menu(props) {
     {
       text: "Resume",
       icon: <DescriptionIcon />,
-      link: "https://guido-asbun.s3.amazonaws.com/Snap+Resume+1.pdf",
+      link: "https://guido-asbun.s3.amazonaws.com/Resume+1.22+-+July+2021.pdf",
     },
   ];
 

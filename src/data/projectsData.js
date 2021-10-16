@@ -1,13 +1,14 @@
 export default [
   {
-    title: "Portfolio",
-    image: "https://guido-asbun.s3.amazonaws.com/Portfolio2.png",
-    githubLink: "https://github.com/guidoasbun/snap-portfolio",
-    deployLink: "https://safety.d20qispccpdccf.amplifyapp.com/",
+    title: "Dream-Green",
+    image: "https://snap-academy-final.s3.amazonaws.com/functionalDemo.gif",
+    githubLink: "https://github.com/guidoasbun/Dream-Green",
+    deployLink: "https://github.com/guidoasbun/Dream-Green",
     summary:
-        "Portfolio page to showcase my applications",
+        "A Full Stack mobile application that that finds local empty lots around you by using Geo-Location. " +
+        "Then activates an augmented reality lens to show its greener repurpose. ",
     techUsed:
-        "React JS, HTTP/CSS, AWS, Material UI",
+        "React Native, Firebase, Various React Native APIs"
   },
   {
     title: "CrypIt",

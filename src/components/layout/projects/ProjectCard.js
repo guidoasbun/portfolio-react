@@ -15,11 +15,11 @@ import WebIcon from '@material-ui/icons/Web';
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
-    minHeight: 510,
+    minHeight: 700,
     alignContent: "center",
   },
   image: {
-    height: 150,
+    height: 300,
     width: 150,
   },
   divider: {

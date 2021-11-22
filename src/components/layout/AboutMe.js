@@ -34,9 +34,11 @@ const AboutMe = () => {
         <Typography className={classes.title}>About Me</Typography>
         <Divider />
         <Typography variant="body2" gutterBottom className={classes.pos}>
-          Full Stack Developer currently a Snap Engineering Academy scholar,
-          working on cutting edge software development technologies. Graduate of
-          the University Of California Irvine full stack development program,
+          Full Stack Developer, currently a computer science student, and a
+          recent Snap Engineering Academy Scholar. Working on cutting edge
+          software development technologies. A self
+          taught developer and Graduate of the University Of California
+          Irvine full stack development program,
           developed skills in Mongo db, Express, React Js, Node Js and many
           other technologies. Worked on various group projects, some as group
           lead, to create applications that demonstrate my full stack

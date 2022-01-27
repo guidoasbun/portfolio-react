@@ -11,6 +11,15 @@ export default [
         "React Native, Firebase, Various React Native APIs"
   },
   {
+    title: "Donor Tracker Project",
+    image: "https://guido-asbun.s3.amazonaws.com/CppProject1ImageV2.png",
+    githubLink: "https://github.com/guidoasbun/Cpp2-project1",
+    deployLink: "https://github.com/guidoasbun/Cpp2-project1",
+    summary:
+        "A C++ console project that interacts with the user to display details about donors, and donations.",
+    techUsed: "C++, Object Oriented Programing, Nodes",
+  },
+  {
     title: "CrypIt",
     image: "https://guido-asbun.s3.amazonaws.com/CrypIt.png",
     githubLink: "https://github.com/guidoasbun/cryp-it",
